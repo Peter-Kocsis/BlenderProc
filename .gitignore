@@ -27,3 +27,5 @@ docs/source/*rst
 docs/source/images/
 docs/source/examples/
 docs/source/*md
+
+blenderproc.egg-info/
