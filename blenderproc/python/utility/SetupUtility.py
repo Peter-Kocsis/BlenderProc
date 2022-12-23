@@ -217,7 +217,7 @@ class SetupUtility:
                     if use_custom_package_path:
                         extra_args.extend(["--target", packages_path])
                     # Run pip install
-                    subprocess.Popen([python_bin, "-m", "pip", "install", package, "--upgrade"] + extra_args, env=dict(os.environ, PYTHONPATH=packages_path)).wait()
+                    subprocess.Popen([python_bin, "-m", "pip", "install", package], env=dict(os.environ, PYTHONPATH=packages_path)).wait()
                     SetupUtility.installed_packages[package_name] = package_version
                     packages_were_installed = True
                 else:
